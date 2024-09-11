@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { postCreateNewUser } from '../../../../service/apiService';
 
 const ModalCreateUser = (props) => {
-    const { show, setShow } = props;
+    const { show, setShow, fetchAllUsers } = props;
     const handleClose = () => {
         setShow(false);
         setEmail("");
@@ -32,9 +32,11 @@ const ModalCreateUser = (props) => {
 
     const handleSubmitCreateUser = async () => {
         let res = await postCreateNewUser(email, password, username, role, image);
+
         if (res.status) {
-            toast.success(res.data.message);
             handleClose();
+            toast.success(res.message);
+            fetchAllUsers();
         }
     }
 
