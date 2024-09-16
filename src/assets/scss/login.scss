@@ -1,0 +1,40 @@
+.login-container {
+    .login-content {
+        height: 62vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .login-title {
+            margin-bottom: 30px;
+        }
+
+        .login-welcome {
+            font-size: 20px;
+            color: #4C4C4C;
+        }
+
+        .form-group {
+            .input-group {
+                .form-control {
+                    width: 200px;
+                }
+            }
+
+            .form-control {
+                width: 260px;
+            }
+
+            .forgot-password {
+                font-size: 14px;
+                color: #767676;
+                text-decoration: underline;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { postUpdateUser } from '../../../../service/apiService';
 
 const ModalUpdateUser = (props) => {
-    const { show, setShow, fetchAllUsers, userDataUpdate, resetDataUser } = props;
+    const { show, setShow, fetchAllUsersWithPaginate, userDataUpdate, resetDataUser } = props;
     const handleClose = () => {
         setShow(false);
         setEmail("");
@@ -38,7 +38,7 @@ const ModalUpdateUser = (props) => {
         if (res.status) {
             handleClose();
             toast.success(res.message);
-            fetchAllUsers();
+            fetchAllUsersWithPaginate(1);
         }
     }
 

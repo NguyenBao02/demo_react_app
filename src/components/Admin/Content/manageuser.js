@@ -73,9 +73,9 @@ const ManageUser = () => {
                     <TableUserPaginate handleBtnDelete={handleBtnDelete} handleBtnView={handleBtnView} handleBtnUpdate={handleBtnUpdate} listUsers={listUsers} fetchAllUsersWithPaginate={fetchAllUsersWithPaginate} pageConut={totalPage} />
                 </div>
                 <ModalCreateUser show={showCreateModal} setShow={setShowCreateModal} fetchAllUsers={fetchAllUsers} />
-                <ModalUpdateUser resetDataUser={resetDataUser} userDataUpdate={userDataUpdate} show={showUpdateUser} setShow={setShowUpdateUser} fetchAllUsers={fetchAllUsers} />
+                <ModalUpdateUser resetDataUser={resetDataUser} userDataUpdate={userDataUpdate} show={showUpdateUser} setShow={setShowUpdateUser} fetchAllUsersWithPaginate={fetchAllUsersWithPaginate} />
                 <ModalViewUser resetDataUser={resetDataUser} userDataView={userDataView} show={showViewUser} setShow={setShowViewUser} />
-                <ModalDeleteUser show={showDeleteUser} setShow={setShowDeleteUser} userDataDelete={userDataDelete} fetchAllUsers={fetchAllUsers} />
+                <ModalDeleteUser show={showDeleteUser} setShow={setShowDeleteUser} userDataDelete={userDataDelete} fetchAllUsersWithPaginate={fetchAllUsersWithPaginate} />
             </div>
         </div>
     )
