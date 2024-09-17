@@ -4,15 +4,19 @@ import { useState } from "react";
 import { postParticipantLogin } from "../../service/apiService";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { doLogin } from "../../redux/action/userAction";
 
 const Login = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const handleSubmitForm = async () => {
         let res = await postParticipantLogin(email, password);
         if (res.status) {
+            dispatch(doLogin(res))
             navigate('/');
             toast.success(res.message);
         } else {
