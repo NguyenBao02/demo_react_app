@@ -10,6 +10,7 @@ import DashBoard from './components/Admin/Content/dashboard';
 import ManageUser from './components/Admin/Content/manageuser';
 import Login from './components/Auth/login';
 import { ToastContainer, toast } from 'react-toastify';
+import Register from "./components/Auth/register";
 
 const Layout = (props) => {
     const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const Layout = (props) => {
         {
             path: "/login",
             element: <Login />,
+        },
+        {
+            path: "/register",
+            element: <Register />,
         },
     ]);
 

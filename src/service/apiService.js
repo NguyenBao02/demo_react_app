@@ -41,4 +41,12 @@ const postParticipantLogin = (email, password) => {
     return axios.post('auth/login', data);
 }
 
-export { postCreateNewUser, getAllUsers, postUpdateUser, postDeleteUser, getUsersWithPaginate, postParticipantLogin };
+const postParticipantRegister = (email, password, username) => {
+    const data = new FormData();
+    data.append('email', email);
+    data.append('password', password);
+    data.append('username', username);
+    return axios.post('auth/register', data);
+}
+
+export { postCreateNewUser, getAllUsers, postUpdateUser, postDeleteUser, getUsersWithPaginate, postParticipantLogin, postParticipantRegister };
