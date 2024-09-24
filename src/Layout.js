@@ -11,6 +11,7 @@ import ManageUser from './components/Admin/Content/manageuser';
 import Login from './components/Auth/login';
 import { ToastContainer, toast } from 'react-toastify';
 import Register from "./components/Auth/register";
+import ListQuizz from "./components/User/listQuizz";
 
 const Layout = (props) => {
     const router = createBrowserRouter([
@@ -24,7 +25,7 @@ const Layout = (props) => {
                 },
                 {
                     path: "user",
-                    element: <User />,
+                    element: <ListQuizz />,
                 },
             ],
         },

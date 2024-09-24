@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { doLogin } from "../../redux/action/userAction";
+import { ImSpinner6 } from "react-icons/im";
 
 const Login = (props) => {
     const [email, setEmail] = useState("");
@@ -51,7 +52,12 @@ const Login = (props) => {
                         </div>
                     </div>
                     <span className="d-block forgot-password mb-4">Forgot password?</span>
-                    <button className="btn btn-dark w-100" onClick={() => handleSubmitForm()}>Log in to Typeform</button>
+                    <button className="btn btn-dark w-100" onClick={() => handleSubmitForm()}>
+                        {/* <ImSpinner6 className="loader_icon" /> */}
+                        <span className="ms-2">
+                            Log in to Typeform
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
