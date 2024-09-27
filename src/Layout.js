@@ -12,6 +12,7 @@ import Login from './components/Auth/login';
 import { ToastContainer, toast } from 'react-toastify';
 import Register from "./components/Auth/register";
 import ListQuizz from "./components/User/listQuizz";
+import DetailQuiz from "./components/User/detailQuiz"
 
 const Layout = (props) => {
     const router = createBrowserRouter([
@@ -23,11 +24,15 @@ const Layout = (props) => {
                     index: true,
                     element: <HomePage />,
                 },
-                {
-                    path: "user",
-                    element: <ListQuizz />,
-                },
             ],
+        },
+        {
+            path: "user",
+            element: <ListQuizz />,
+        },
+        {
+            path: "detail-quiz/:id",
+            element: <DetailQuiz />,
         },
         {
             path: "admin",
